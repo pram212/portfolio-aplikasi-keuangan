@@ -12,9 +12,20 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function __construct()
     {
-        //
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {   
+        // ambil data dari tabel kategoris
+        $kategori = Kategori::paginate(10);
+
+        // tampilkan hal. index kategori yg berada dalam folder: resources/views/kategori/index.blade.php
+        // kirim data ke dalam view ($kategori)
+        return view('kategori.index', compact('kategori'));
     }
 
     /**
@@ -24,7 +35,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        // tampilkan form tambah kategori yg berada dalam folder: resources/views/kategori/tambah.blade.php
+        return view('kategori.tambah');
     }
 
     /**
@@ -35,7 +47,17 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validasi hasil inputan
+        $request->validate([
+            'kategori' => 'required'
+        ]);
+        
+        // simpan ke dalam database
+        Kategori::create($request->all()); 
+            # untuk menggunakan request->all(), nama inputan harus sama dengan nama atribut dalam tabel yang bersangkutan
+        
+        // arahkan kembali ke /kategori dengan menyertakan session flash bernama 'sukses' dan 'pesan'.
+        return redirect('/kategori')->with('sukses', 'Kategori baru berhasil ditambahkan!');
     }
 
     /**
@@ -57,7 +79,7 @@ class KategoriController extends Controller
      */
     public function edit(Kategori $kategori)
     {
-        //
+        return view('kategori.edit', compact('kategori'));
     }
 
     /**
@@ -69,7 +91,16 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
-        //
+        // validasi request
+        $request->validate([
+            'kategori' => 'required'
+        ]);
+
+        // update tabel kategori dengan id tertentu ($kategori) 
+        $kategori->update($request->all());
+
+        // alihkan ke /kategori disertai flash 'sukses' dengan pesan 'data berhasil diubah!'.
+        return redirect('/kategori')->with('sukses', 'Data berhasil diubah!');
     }
 
     /**
@@ -80,6 +111,10 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
-        //
+        // hapus kategori
+        $kategori->delete();
+        
+        // alihkan ke /kategori disertai flash 'sukses' dengan pesan 'data berhasil dihapus!'.
+        return redirect('/kategori')->with('sukses', 'Data berhasil dihapus!');
     }
 }

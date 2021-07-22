@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header text-center bg-dark text-white">Edit Kategori</div>
                 <div class="card-body">
-                    <form action="{{url('/kategori/update/'.$kategori->id)}}" method="POST">
+                    <form action="{{url('/kategori/'.$kategori->id)}}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group">

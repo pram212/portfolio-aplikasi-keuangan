@@ -21,9 +21,5 @@ Auth::routes([
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/kategori', 'HomeController@kategori');
-Route::get('/kategori/tambah', 'HomeController@tambah');
-Route::post('/kategori/simpan', 'HomeController@simpan');
-Route::get('/kategori/edit/{id}', 'HomeController@edit');
-Route::put('/kategori/update/{id}', 'HomeController@update');
-Route::get('/kategori/hapus/{id}', 'HomeController@hapus');
+Route::resource('/kategori', 'KategoriController');
+Route::resource('/transaksi', 'TransaksiController');

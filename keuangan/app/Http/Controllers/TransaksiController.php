@@ -14,7 +14,9 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        // ambil data transaksi
+        $transaksi = Transaksi::paginate(8);
+        return view('transaksi.index', compact('transaksi'));
     }
 
     /**
@@ -24,7 +26,8 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
+        // tampilkan view tambah
+        return view('transaksi.tambah');
     }
 
     /**
@@ -46,9 +49,9 @@ class TransaksiController extends Controller
      */
     public function show(Transaksi $transaksi)
     {
-        //
+        
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -58,6 +61,7 @@ class TransaksiController extends Controller
     public function edit(Transaksi $transaksi)
     {
         //
+        return view('transaksi.edit', compact('transaksi'));
     }
 
     /**
@@ -69,7 +73,13 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, Transaksi $transaksi)
     {
-        //
+        $request->validate([
+            ''
+        ]);
+
+        $transaksi->create($request->all());
+
+        return view('/transaksi')->with('sukses', 'Transaksi berhasil ditambahkan!');
     }
 
     /**
@@ -80,6 +90,6 @@ class TransaksiController extends Controller
      */
     public function destroy(Transaksi $transaksi)
     {
-        //
+        $transaksi->delete();
     }
 }

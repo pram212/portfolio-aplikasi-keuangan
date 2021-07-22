@@ -2,18 +2,18 @@
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header text-center bg-dark text-white">Kategori Baru</div>
+                <div class="card-header text-center bg-dark text-white">Transaksi Baru</div>
                 <div class="card-body">
-                    <form action="{{url('/kategori')}}" method="POST">
+                    <form action="{{url('/transaksi')}}" method="POST">
                         @csrf
                         <div class="form-group">
-                          <label for="kategori">Nama Kategori :</label>
-                          <input type="text" name="kategori" id="kategori" class="form-control @error('kategori')
+                          <label for="tanggal">Nama Transaksi :</label>
+                          <input type="date" name="tanggal" id="tanggal" class="form-control @error('tanggal')
                               is-invalid
-                          @enderror" placeholder="Masukan nama kategori" aria-describedby="helpId" value="{{old('kategori')}}">
-                          @error('kategori')
+                          @enderror" placeholder="Masukan nama kategori" aria-describedby="helpId" value="{{old('tanggal')}}">
+                          @error('tanggal')
                             <small id="helpId" class="text-danger">{{$message}}</small>
                           @enderror
                         </div>
