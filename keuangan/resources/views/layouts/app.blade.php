@@ -53,10 +53,10 @@
                             <a href="{{url('/home')}}" class="nav-link">Dasbor</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/kategori')}}" class="nav-link">Kategori</a>
+                            <a href="{{url('/transaksi')}}" class="nav-link">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/transaksi')}}" class="nav-link">Transaksi</a>
+                            <a href="{{url('/kategori')}}" class="nav-link">Kategori</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/laporan')}}" class="nav-link">Laporan</a>
@@ -84,7 +84,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-2">
             @yield('content')
         </main>
     </div>

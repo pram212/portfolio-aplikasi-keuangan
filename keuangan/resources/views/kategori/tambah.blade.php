@@ -12,7 +12,7 @@
                           <label for="kategori">Nama Kategori :</label>
                           <input type="text" name="kategori" id="kategori" class="form-control @error('kategori')
                               is-invalid
-                          @enderror" placeholder="Masukan nama kategori" aria-describedby="helpId" value="{{old('kategori')}}">
+                          @enderror" placeholder="Masukan nama kategori" aria-describedby="helpId" value="{{old('kategori')}}" autofocus>
                           @error('kategori')
                             <small id="helpId" class="text-danger">{{$message}}</small>
                           @enderror

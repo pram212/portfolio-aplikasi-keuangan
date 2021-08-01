@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Kategori;
+use App\Transaksi;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -21,7 +22,7 @@ class KategoriController extends Controller
     public function index()
     {   
         // ambil data dari tabel kategoris
-        $kategori = Kategori::paginate(10);
+        $kategori = Kategori::paginate(7);
 
         // tampilkan hal. index kategori yg berada dalam folder: resources/views/kategori/index.blade.php
         // kirim data ke dalam view ($kategori)
@@ -112,9 +113,13 @@ class KategoriController extends Controller
     public function destroy(Kategori $kategori)
     {
         // hapus kategori
+        $coba = $kategori->transaksi();
+        // hapus juga data transaksi yang termasuk ke dalam kategori tersebut
+        $coba->delete();
         $kategori->delete();
         
+        
         // alihkan ke /kategori disertai flash 'sukses' dengan pesan 'data berhasil dihapus!'.
-        return redirect('/kategori')->with('sukses', 'Data berhasil dihapus!');
+        return redirect('/kategori')->with('sukses', 'Data kategori serta transaksi terkait berhasil dihapus!');
     }
 }

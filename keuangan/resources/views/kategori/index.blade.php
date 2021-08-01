@@ -4,34 +4,33 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card bg-secondary">
                 <div class="card-header text-center bg-dark text-white">Daftar Kategori
                 </div>
                 <div class="card-body">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a name="" id="" class="btn btn-primary border btn-sm" href="/kategori/create" role="button">baru</a>
+                            <a name="" id="" class="btn btn-primary border btn-sm" href="/kategori/create" role="button">Kategori baru</a>
                         </li>
                         <li class="list-inline-item">
-                            <div class="dropdown open">
-                                <button class="btn btn-sm btn-success dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                            Export          
-                                        </button>
-                                <div class="dropdown-menu" aria-labelledby="triggerId">
-                                    <button class="dropdown-item" href="#">PDF</button>
-                                    <button class="dropdown-item" href="#">Excel</button>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-success btn-sm">Import</button>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Export
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">pdf</a>
+                                        <a class="dropdown-item" href="#">excel</a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-sm btn-warning" href="#" role="button">Import</a>
-                        </li>
-                        <li class="list-inline-item">
                             <form class="form-inline">
-                                <input class="form-control-sm mr-sm-2" type="search" placeholder="Ketikan nama kategori" aria-label="Search" autofocus>
-                                <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Cari</button>
-                              </form>
+                                <input class="form-control-sm mr-sm-2" type="search" placeholder="cari kategori ..." aria-label="Search" autofocus style="border:0px;">
+                                <button class="btn btn-outline-light btn-sm my-0 my-sm-0" type="submit">Cari</button>
+                            </form>
                         </li>
                     </ul>
                     @if (Session::has('sukses'))
@@ -45,8 +44,8 @@
                           $(".alert").alert();
                         </script>
                     @endif
-                   <table class="table table-sm table-bordered table-responsive">
-                       <thead class="text-center bg-dark text-white">
+                   <table class="table table-sm table-dark table-bordered table-striped table-responsive">
+                       <thead class="text-center text-white">
                            <tr>
                                <th width="1%">No</th>
                                <th>Nama Kategori</th>
@@ -87,16 +86,13 @@
                         </tbody>
                    </table>
                 </div>
-                <div class="card-footer">
-                    <ul class="list-inline float-left">
-                        <li class="list-inline-item">
+                <div class="card-footer pl-4 pb-0 bg-dark text-white">
+                    <ul class="list-inline">
+                        <li class="list-inline-item border px-2">
                             Halaman : {{$kategori->currentPage()}} 
                         </li>
-                        <li class="list-inline-item">
+                        <li class="list-inline-item border px-2">
                             Jumlah Data : {{$kategori->total()}} 
-                        </li>
-                        <li class="list-inline-item">
-                            Data Perhalaman : {{$kategori->perPage()}} 
                         </li>
                     </ul>
                     {{$kategori->links()}}

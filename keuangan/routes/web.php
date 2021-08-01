@@ -22,4 +22,7 @@ Auth::routes([
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/kategori', 'KategoriController');
+Route::get('/transaksi/pencarian', 'TransaksiController@pencarian');
+Route::get('/laporan', 'LaporanController@index');
+Route::get('/laporan/filter', 'LaporanController@filter');
 Route::resource('/transaksi', 'TransaksiController');

@@ -11,7 +11,7 @@
                         @method('PUT')
                         <div class="form-group">
                           <label for="kategori">Nama Kategori :</label>
-                          <input type="text" name="kategori" id="kategori" class="form-control @error('kategori')
+                          <input type="text" name="kategori" autofocus id="kategori" class="form-control @error('kategori')
                               is-invalid
                           @enderror" placeholder="Masukan nama kategori" aria-describedby="helpId" value="{{$kategori->kategori}}">
                           @error('kategori')
