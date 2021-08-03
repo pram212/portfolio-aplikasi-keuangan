@@ -71,10 +71,10 @@
                     {{-- list-inline start --}}
                     <ul class="list-inline mt-2">
                         <li class="list-inline-item">
-                            <a class="btn btn-secondary btn-sm" href="{{url('/laporan/print?dari='.$from.'&sampai='.$to.'&kategori='.$kategori)}}" role="button" target="_blank">Print</a>
+                            <a class="btn btn-secondary btn-sm" href="{{url('/laporan/print?from='.$from.'&to='.$to.'&kategori='.$id_kategori)}}" role="button" target="_blank">Print</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-success btn-sm" href="{{url('/laporan/excel?dari='.$from.'&sampai='.$to.'&kategori='.$kategori)}}" role="button" target="_blank">Excel</a>
+                            <a class="btn btn-success btn-sm" href="{{url('/laporan/excel?dari='.$from.'&sampai='.$to.'&kategori='.$id_kategori)}}" role="button" target="_blank">Excel</a>
                         </li>
                     </ul>
                     {{-- list-inline end --}}
@@ -99,7 +99,7 @@
                         <tbody>
                             @foreach ($laporan as $data)
                             <tr>
-                                <td scope="row">{{$data->tanggal}}</td>
+                                <td scope="row">{{ date('d/m/Y', strtotime($data->tanggal)) }}</td>
                                 <td>{{$data->jenis}}</td>
                                 <td>{{$data->kategori->kategori}}</td>
                                 <td>{{$data->keterangan}}</td>
@@ -132,10 +132,6 @@
                                 <td colspan="4" class="text-right font-weight-bold">Total :</td>
                                 <td><strong>{{"Rp ". number_format($totalpemasukan). ",-"}}</strong></td>
                                 <td><strong>{{"Rp ". number_format($totalpengeluaran). ",-"}}</strong></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" class="text-right font-weight-bold">Saldo :</td>
-                                <td colspan="2" class="text-center"><strong>{{"Rp ". number_format($totalpemasukan - $totalpengeluaran). ",-"}}</strong></td>
                             </tr>
                         </tfoot>
                     </table>

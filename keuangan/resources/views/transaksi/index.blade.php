@@ -54,7 +54,7 @@
                                 <th rowspan="2" class="align-middle">Keterangan</th>
                                 <th rowspan="2" class="align-middle">Kategori</th>
                                 <th colspan="2" class="align-middle">Transaksi</th>
-                                <th width="15%" rowspan="2" class="align-middle">Opsi</th>
+                                <th width="12%" rowspan="2" class="align-middle">Opsi</th>
                             </tr>
                             <tr>
                                 <th width="12%">Pemasukan</th>
@@ -64,8 +64,8 @@
                          <tbody>
                              @forelse ($transaksi as $item)
                              <tr>
-                                 <td scope="row">{{$loop->iteration}}</td>
-                                 <td>{{date('d-m-y', strtotime($item->tanggal))}}</td>
+                                 <td scope="row" class="text-center">{{$loop->iteration}}</td>
+                                 <td>{{date('d/m/y', strtotime($item->tanggal))}}</td>
                                  <td>{{ucwords($item->jenis)}}</td>
                                  <td>{{ucwords($item->keterangan)}}</td>
                                  <td>{{ucwords($item->kategori->kategori)}}</td>
@@ -117,7 +117,7 @@
                                                              {{-- form delete --}}
                                                              <form action="{{url('transaksi/'.$item->id)}}" method="POST">
                                                                  @csrf
-                                                                 @method('delete')
+                                                                 @method('DELETE')
                                                                  <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                              </form>
                                                              {{-- form delete end --}}
