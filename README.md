@@ -32,3 +32,21 @@ Aplikasi ini dibuat sebagai study kasus untuk melatih dan mengimplementasikan tu
 
 # design ERD
 ![ERD-keuangan](https://user-images.githubusercontent.com/75150113/127984571-d35d77c0-6ae7-4a0a-8d0d-d0ab9e5b8014.png)
+
+# requirement
+- PHP >= 7.4
+- sudah terinstall git
+- sudah terinstall composer
+- sudah terinstall web server (xampp/mampp/wampp/lainnya)
+
+# instalasi
+- buat database dengan nama sc_keuangan
+- sesuaikan DB_UERNAME dan DB_PASSWORD di file .env
+- buka command prompt ketikan git clone https://github.com/pram212/portfolio-aplikasi-keuangan.git
+- ketikan php artisan key:generate
+- ketikan composer install
+- ketikan php artisan migrate
+- ubah file web.php pada bagian Auth::routes(['register'=>false, 'reset'=> false]); menjadi Auth::routes(['reset'=> false]); untuk mengaktifkan register user.
+- ketikan php artisan serve
+- daftarkan user
+- selesai
