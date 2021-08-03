@@ -48,5 +48,5 @@ Aplikasi ini dibuat sebagai study kasus untuk melatih dan mengimplementasikan tu
 - ketikan php artisan migrate
 - ubah file web.php pada bagian Auth::routes(['register'=>false, 'reset'=> false]); menjadi Auth::routes(['reset'=> false]); untuk mengaktifkan register user.
 - ketikan php artisan serve
-- daftarkan user
+- buat user baru
 - selesai
