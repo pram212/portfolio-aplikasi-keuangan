@@ -50,16 +50,16 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <a href="{{url('/home')}}" class="nav-link">Dasbor</a>
+                            <a href="{{url('/home')}}" class="nav-link" id="dasbor">Dasbor</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/transaksi')}}" class="nav-link">Transaksi</a>
+                            <a href="{{url('/transaksi')}}" class="nav-link" id="transaksi">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/kategori')}}" class="nav-link">Kategori</a>
+                            <a href="{{url('/kategori')}}" class="nav-link" id="kategori">Kategori</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/laporan')}}" class="nav-link">Laporan</a>
+                            <a href="{{url('/laporan')}}" class="nav-link" id="laporan">Laporan</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -88,5 +88,8 @@
             @yield('content')
         </main>
     </div>
+
+    @stack('script')
+    
 </body>
 </html>
