@@ -28,4 +28,5 @@ Route::get('/laporan/filter', 'LaporanController@filter');
 Route::get('/laporan/print', 'LaporanController@printLaporan');
 Route::get('/laporan/excel', 'LaporanController@exportExcel');
 Route::resource('/transaksi', 'TransaksiController');
-Route::get('', 'GantiPasswordController@form');
+Route::get('/gantipassword', 'GantiPasswordController@form');
+Route::post('/gantipassword', 'GantiPasswordController@reset');
