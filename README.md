@@ -14,7 +14,8 @@ Aplikasi ini dibuat sebagai study kasus untuk melatih dan mengimplementasikan tu
 - filter laporan transaksi
 - cetak laporan transaksi
 - export excel laporan transaksi
-- ganti password user.
+- ganti password user
+- database relationship (one to many)
 
 # bahasa 
 - PHP mysql
@@ -28,3 +29,6 @@ Aplikasi ini dibuat sebagai study kasus untuk melatih dan mengimplementasikan tu
 # library packages
 - faker PHP
 - maatwebsite/laravel-excel
+
+# design ERD
+![ERD-keuangan](https://user-images.githubusercontent.com/75150113/127984571-d35d77c0-6ae7-4a0a-8d0d-d0ab9e5b8014.png)
