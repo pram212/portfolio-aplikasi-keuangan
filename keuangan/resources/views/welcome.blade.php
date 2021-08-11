@@ -339,19 +339,23 @@
           <div class="col-md-4 text-center">
             <p class="mb-4">
               <span class="icon-room d-block h2 text-primary"></span>
-              <span>Jl. Tb Simatupang No. 72, Cilandak Timur, Pasar Minggu, Jakarta Selatan</span>
+              <span>
+                    <a href="https://www.google.com/maps/place/Puskopad+%E2%80%9CA%E2%80%9D+Dam+Jaya/@-6.2917775,106.8122557,19z/data=!3m1!4b1!4m5!3m4!1s0x2e69f1f977d1ff71:0x4a3e5aa0ad618757!8m2!3d-6.2917788!4d106.8128029" target="_blank">
+                    Jl. Tb Simatupang No. 72, Cilandak Timur, Pasar Minggu, Jakarta Selatan
+                </a>
+              </span>
             </p>
           </div>
           <div class="col-md-4 text-center">
             <p class="mb-4">
               <span class="icon-phone d-block h2 text-primary"></span>
-              <a href="#">082117694669</a>
+              <a href="https://wa.me/6282117694669?text=Assalamu'alaikum" target="_blank">082117694669</a>
             </p>
           </div>
           <div class="col-md-4 text-center">
             <p class="mb-0">
               <span class="icon-mail_outline d-block h2 text-primary"></span>
-              <a href="#">pramono6236@gmail.com</a>
+              <a href="mailto:pramono6236@gmail.com">pramono6236@gmail.com</a>
             </p>
           </div>
         </div>
