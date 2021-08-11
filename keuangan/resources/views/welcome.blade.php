@@ -83,6 +83,7 @@
                 <li class="social"><a href="https://web.facebook.com/framono.torres/" class="nav-link" target="_blank"><span class="icon-facebook"></span></a></li>
                 <li class="social"><a href="https://www.instagram.com/pram0n0_/?hl=en" class="nav-link" target="_blank"><span class="icon-instagram"></span></a></li>
                 <li class="social"><a href="https://www.linkedin.com/in/pra-mono-82a0721b9/" class="nav-link" target="_blank"><span class="icon-linkedin"></span></a></li>
+                <li class="social"><a href="https://github.com/pram212/portfolio-aplikasi-keuangan/tree/main/keuangan" class="nav-link" target="_blank"><span class="icon-github"></span></a></li>
               </ul>
             </nav>
           </div>
