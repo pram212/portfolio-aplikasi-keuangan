@@ -27,9 +27,8 @@
                         </li>
                         <li class="list-inline-item">
                             <form class="form-inline" action="{{url('/transaksi/pencarian')}}" method="get">
-                                <input class="form-control-sm mr-sm-2" type="search" placeholder="cari transaksi..." aria-label="Search" autofocus style="border: 0px" name="katakunci" value="@isset($katakunci)
-                                    {{$katakunci}}
-                                @endisset">
+                                @csrf
+                                <input class="form-control-sm mr-sm-2" type="search" placeholder="cari transaksi..." aria-label="Search" autofocus style="border: 0px" name="katakunci" value="@isset($katakunci){{$katakunci}}@endisset">
                                 <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Cari</button>
                             </form>
                         </li>
@@ -134,7 +133,7 @@
                              </tr>  
                              @empty
                              <tr class="text-center">
-                                 <td colspan="3">
+                                 <td colspan="8">
                                      Belum ada data.
                                  </td>
                              </tr>

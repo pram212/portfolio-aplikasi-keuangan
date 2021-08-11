@@ -137,15 +137,18 @@ class TransaksiController extends Controller
     public function pencarian(Request $request)
     {   
         $katakunci = $request->katakunci;
-        $transaksi = Transaksi::where('jenis', 'like', '%'.$katakunci.'%')
-                            ->orWhere('tanggal', 'like', '%'.$katakunci. '%')
+
+        $transaksi = Transaksi::orderBy('id', 'desc')
+                            ->where('jenis', 'like', '%'.$katakunci.'%')
+                            ->orWhere('tanggal', 'like', '%'.$katakunci.'%')
                             ->orWhere('keterangan', 'like', '%'.$katakunci. '%')
-                            ->orWhere('nominal', '=', '%'.$katakunci. '%')
+                            ->orWhere('nominal', 'like', '%'.$katakunci. '%')
                             ->paginate(7);
 
-        // menambahkan kewword pencarian ke data transaksi
+        // menambahkan keyword pencarian ke data transaksi
         $transaksi->appends($request->only('katakunci'));
+
         // passing data ke view index transaksi.
-        return view('transaksi.index', compact('transaksi'));
+        return view('transaksi.index', compact('transaksi', 'katakunci'));
     }
 }
