@@ -7,7 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('webApp/fonts/icomoon/style.css')}}">
-
+  <link rel="stylesheet" href="{{url('https://i.icomoon.io/public/temp/0448aa766e/UntitledProject/style.css')}}">
   <link rel="stylesheet" href="{{asset('webApp/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('webApp/css/jquery-ui.css')}}">
   <link rel="stylesheet" href="{{asset('webApp/css/owl.carousel.min.css')}}">
@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="{{asset('webApp/css/aos.css')}}">
 
   <link rel="stylesheet" href="{{asset('webApp/css/style.css')}}">
+  
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -82,7 +83,6 @@
 
                 <li class="social"><a href="https://web.facebook.com/framono.torres/" class="nav-link" target="_blank"><span class="icon-facebook"></span></a></li>
                 <li class="social"><a href="https://www.instagram.com/pram0n0_/?hl=en" class="nav-link" target="_blank"><span class="icon-instagram"></span></a></li>
-                <li class="social"><a href="https://www.linkedin.com/in/pra-mono-82a0721b9/" class="nav-link" target="_blank"><span class="icon-linkedin"></span></a></li>
                 <li class="social"><a href="https://github.com/pram212/portfolio-aplikasi-keuangan/tree/main/keuangan" class="nav-link" target="_blank"><span class="icon-github"></span></a></li>
               </ul>
             </nav>
@@ -237,39 +237,51 @@
         <div class="row text-center">
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="0">
             <div class="feature-v2">
-              <span class="icon-people_outline"></span>
-              <h3>HTML5</h3>
+                <span class="icon-html5 bg-light border"></span>
+                <h3 class="text-primary">HTML5</h3>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="feature-v2">
-              <span class="icon-phone_android"></span>
-              <h3>CSS3</h3>
+                <span class="icon-css31 bg-light border"></span>
+                <h3 class="text-primary">CSS</h3>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="feature-v2">
-              <span class="icon-pie_chart"></span>
-              <h3>Javascript</h3>
+                <span class="icon-javascript bg-light border"></span>
+                <h3 class="text-primary">Javascript</h3>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-v2">
+                <span class="icon-php bg-light border"></span>
+                <h3 class="text-primary">PHP</h3>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-v2">
+                <span class="icon-mysql bg-light border"></span>
+                <h3 class="text-primary">Mysql</h3>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="feature-v2">
-              <span class="icon-public"></span>
-              <h3>jQuery</h3>
+                <span class="icon-jquery bg-light border"></span>
+                <h3 class="text-primary">jQuery</h3>
             </div>
           </div>
 
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="0">
             <div class="feature-v2">
-              <span class=" icon-search2"></span>
-              <h3>Bootstrap</h3>
+                <span class="icon-bootstrap bg-light border"></span>
+                <h3 class="text-primary">Bootstrap</h3>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="feature-v2">
-              <span class=" icon-security"></span>
-              <h3>Laravel</h3>
+                <span class="icon-laravel bg-light border"></span>
+                <h3 class="text-primary">Laravel</h3>
             </div>
           </div>
       </div>
@@ -440,5 +452,6 @@
     <script src="{{asset('webApp/js/jquery.sticky.js')}}"></script>
     <script src="{{asset('webApp/js/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('webApp/js/main.js')}}"></script>
+
   </body>
   </html>
